@@ -7,9 +7,9 @@ MAP_HEIGHT = 2.5;
 lat_list = ["latitude"];
 long_list = ["longitude"];
 pop_density = ["population_2020"];
-df = pd.read_csv("C:\\Users\Sarin\Downloads\pioneerandPropser\PioneerandProsper\population_vnm_2018-10-01.csv", usecols= lat_list);
-df1 = pd.read_csv("C:\\Users\Sarin\Downloads\pioneerandPropser\PioneerandProsper\population_vnm_2018-10-01.csv", usecols = long_list);
-df2 = pd.read_csv("C:\\Users\Sarin\Downloads\pioneerandPropser\PioneerandProsper\population_vnm_2018-10-01.csv", usecols = pop_density);
+df = pd.read_csv("C:\\Users\Sarin\Downloads\pioneerandPropser\PioneerandProsper\csv files\population_vnm_2018-10-01.csv", usecols= lat_list);
+df1 = pd.read_csv("C:\\Users\Sarin\Downloads\pioneerandPropser\PioneerandProsper\csv files\population_vnm_2018-10-01.csv", usecols = long_list);
+df2 = pd.read_csv("C:\\Users\Sarin\Downloads\pioneerandPropser\PioneerandProsper\csv files\population_vnm_2018-10-01.csv", usecols = pop_density);
 
 xdata = df.to_numpy();
 xdata = xdata[0::1250];
@@ -25,8 +25,9 @@ zdata = zdata[0::1250];
 # create title
 fig = plt.figure();
 ax = plt.axes(projection = '3d');
-ax.scatter3D(xdata, ydata, zdata);
-plt.xlabel("x");
-plt.ylabel("y");
-ax.set_zlabel("z");
+ax.scatter(xdata, ydata, zdata, c= 'r', marker = 'o');
+plt.xlabel("Longitude in Degrees");
+plt.ylabel("Latitude in Degrees");
+ax.set_zlabel("Number of Accidents");
+ax.set_title("Number of Traffic Accidents by Longitude and Latitude in Hanoi")
 plt.show();

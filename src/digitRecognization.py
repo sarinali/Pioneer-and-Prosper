@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-data = pd.read_csv(r"C:\\Users\Sarin\Downloads\train.csv").to_numpy();
+data = pd.read_csv(r"C:\Users\Sarin\Downloads\pioneerandPropser\PioneerandProsper\csv files\train.csv").to_numpy();
 clf = DecisionTreeClassifier();
 
 xtrain = data[:21000,1:];

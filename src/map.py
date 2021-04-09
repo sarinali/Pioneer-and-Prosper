@@ -6,6 +6,7 @@ plt.figure()
 x = [1,2,3]
 y = [4,5,6]
 
+# this was a rough py file from when we wanted to graph on a 2D map. 
 # bottom left
 # 21.013415, 105.849094
 
